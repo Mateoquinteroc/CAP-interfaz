@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Cap Login</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black:#676767;
+            --window:rgba(216, 231, 255, 0.78);
+            --grey:#B5B5B5;
+            --lite-white:#F6F6F6;
+            --silver:#E8E8E8;
+            --block-window:#DBE8FA;
+            --orange:#FF9C40;
+            --dark-blue: #004D84;
+            --bold-text: 12pt;
+            --title: 16pt;
+        }
+        body {
+            margin: 0;
+            background: var(--lite-white);
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+            margin: 0;
+            height: 100vh;
+        }
+        .container-login{
+            display: grid;
+            background: var(--window);
+            width: 407px;
+            height: 441px;
+            border-radius: 20px;
+            margin: 0 80px 0 0;
+            justify-self: start;
+            box-shadow: 22.2684px 96.463px 140px rgba(0, 0, 0, 0.14), 11.2734px 48.8344px 61.0312px rgba(0, 0, 0, 0.0945), 4.45368px 19.2926px 22.75px rgba(0, 0, 0, 0.07), 0.974242px 4.22026px 8.09375px rgba(0, 0, 0, 0.0455);
+        }
+        .container-login {
+            grid-column: 5 / 6 ;
+            grid-row: 2 / 3;
+        }
+        .container-login{
+            grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+        }
+
+        .button-info{
+            border: none;
+            width: 100px;
+            height: 50px;
+            color: var(--white);
+            font-weight: bold;
+            font-size: var(--bold-text);
+            border-radius: 50px;
+            background: var(--dark-blue);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            justify-self: center ;
+            align-self: flex-end;
+            margin: 30px;
+        }
+        #li-forget {
+            font-size:var(--bold-text);
+            color: var(--white);
+            font-weight: bold ;
+            text-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+        }
+        .login-child{
+            display: grid;
+            padding: 0;
+        }
+        .login-child h1{
+            color: var(--black);
+            font-size: var(--title);
+            font-weight: bold;
+            justify-self: start;
+            margin-top: 71px;
+            margin-left: 65px;
+            
+        }
+        .login-child li {
+            list-style: none;
+            color: var(--black);
+            font-size: var(--bold-text);
+            font-weight: bold;
+            justify-self: start;
+            padding-left: 72px;
+            margin-bottom: 5px;
+
+        }
+        .login-child ul {
+            padding: 0%;
+            display: grid;
+        }
+        .login-child input {
+            border: none;
+            margin-left: 65px;
+            margin-bottom: 10px;        
+            width: 278px;
+            height: 36px;
+            border-radius: 50px;
+        }
+        .login-child input::placeholder{
+            font-size: var(--bold-text);
+            font-weight: 300;
+            color: var(--grey);
+            padding-left: 15px;
+        }
+        .login-child input:focus{
+            outline:none;
+        }
+        .button-info{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .logo {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3 ;
+        }
+        .logo {
+            border: 0;
+            width: 315px;
+            height: 225px;
+            justify-self: center;
+            align-self: center;
+            filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
+        }
+        .button-enter {
+            border: none;
+            width: 278px;
+            height: 36px;
+            border-radius: 20px;
+            font-size:var(--bold-text);
+            font-weight: bold;
+            background: var(--orange);
+            color: var(--white);
+            box-shadow: 8px 8px 8px rgba(255, 156, 64, 0.25);
+            margin-top: 25px;
+            margin-left: 65px;
+        }
+        .paw {
+            justify-self: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img  class="logo" src="./src/img/Logotipo CAP color.svg" alt="Logo">
+        <button class="button-info">Información</button>
+        <div class="container-login">
+            <div  class="login-child">
+                <h1>Bienvenido a CAP</h1>
+                <ul>
+                    <li>Ingrese su Login</li>
+                    <input type="text" placeholder="Login">
+                    <li>Ingrese su contraseña</li>
+                    <input type="text" placeholder="Contraseña">
+                    <li id="li-forget">¿olvido su contraseña?</li>
+                    <button class="button-enter">Ingresar</button>
+                    <img class="paw" src="./src/img/Huella.svg" alt="Huella">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
