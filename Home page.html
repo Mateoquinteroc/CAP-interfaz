@@ -19,13 +19,33 @@
         --bold-text: 12pt;
         --title: 16pt;
     }
+    body {
+        background: var(--lite-white);
+        width: 100vh;
+        height: 100vh;
+        margin: 0;
+    }
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        height: 58px;
+        width: 100%;
+        background: var(--lite-white);
+        box-shadow: 5px 4px 4px rgba(0, 77, 132, 0.25);
+    }
+    .item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .item li {
+    }
 
     </style>
     <title>Cap Home</title>
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="nav-bar">
+        <ul class="item">
             <li>Hamburguer</li>
             <li>Notification</li>
             <li>User</li>
