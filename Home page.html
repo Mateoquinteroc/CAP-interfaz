@@ -51,6 +51,15 @@
         justify-self: center;
         align-self: center;
     }
+    .hamburguesa:hover {
+        box-shadow: none;
+    }
+    .notification:hover {
+        box-shadow: none;
+    }
+    .user:hover {
+        box-shadow: none;
+    }
     .nav-right{
         display: flex;
         justify-items: flex-end;
@@ -102,6 +111,28 @@
         height: 65px;
         background: var(--dark-blue); 
     }
+    .menu {
+        position: absolute;
+        width: 381px;
+        height: 688px;
+        background: var(--silver);
+        z-index: 2;
+    }
+    .menu li {
+        list-style: none;
+        text-align: center;
+        margin: 10px;
+        color: var(--black);
+    }
+    /* .notificacion-page {
+        display: flex;
+        z-index: 3;
+        margin-left: 0;
+        width:584px;
+        height: 446px;
+        background: var(--silver);
+        border-radius: 20px;
+    } */
 
     </style>
     <title>Cap Home</title>
@@ -120,6 +151,24 @@
             </div>
         </div>
     </nav>
+    <div class="menu">
+        <li>Paqueteo</li>
+        <li>Ensaque</li>
+    </div>
+    <div class="notificacion-page">
+        <div>
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p></p>
+        </div>
+    </div>
     <div class="home">
         <img class="home-img" src="./src/img/Logotipo-CAP-color sin texto.svg" alt="logo">
     </div>
