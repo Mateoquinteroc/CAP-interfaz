@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
     <style>
-        :root {
-        --white: #FFFFFF;
-        --black:#676767;
-        --window:rgba(216, 231, 255, 0.78);
-        --grey:#B5B5B5;
-        --lite-white:#F6F6F6;
-        --silver:#E8E8E8;
-        --block-window:#DBE8FA;
-        --orange:#FF9C40;
-        --dark-blue: #004D84;
-        --bold-text: 12pt;
-        --title: 16pt;
+    :root {
+    --white: #FFFFFF;
+    --black:#676767;
+    --window:rgba(216, 231, 255, 0.78);
+    --grey:#B5B5B5;
+    --lite-white:#F6F6F6;
+    --silver:#E8E8E8;
+    --block-window:#DBE8FA;
+    --orange:#FF9C40;
+    --dark-blue: #004D84;
+    --bold-text: 12pt;
+    --title: 16pt;
     }
     body {
-        background: var(--lite-white);
-        width: 100%;
-        height: 100vh;
         margin: 0;
     }
+    .home {
+        background: var(--lite-white);
+        background-image: url(./src/img/Logotipo-CAP-color\ sin\ texto.svg);
+        background-position:  center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        width: 100vw;
+        height: 100vh;
+    }
     .nav-bar {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background: var(--lite-white);
         height: 58px;
         width: 100%;
-        background: var(--lite-white);
         box-shadow: 5px 4px 4px rgba(0, 77, 132, 0.25);
     }
-
+    .nav-right {
+        position: absolute;
+        right: 0;
+        top: 12px;
+    }
     .hamburguesa {
         display: flex;
+        position: absolute;
+        left: 39px;
         width: 40px;
         height: 40px;
-        margin-left: 39px;
         border-radius: 50%;
-        background: var(--orange);
-        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        background: var(--orange); 
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25); 
     }
     .hamburguesa-img{
         width: 80%;
@@ -51,21 +63,9 @@
         justify-self: center;
         align-self: center;
     }
-    .hamburguesa:hover {
-        box-shadow: none;
-    }
-    .notification:hover {
-        box-shadow: none;
-    }
-    .user:hover {
-        box-shadow: none;
-    }
-    .nav-right{
-        display: flex;
-        justify-items: flex-end;
-        position: relative;
-    }
     .notification {
+        position: absolute;
+        right: 96px;
         display: flex;
         width: 40px;
         height: 40px;
@@ -77,44 +77,32 @@
     .notification-img{
         margin: 8px;
     }
+    .notification-page {
+        position: absolute;
+        top: 25px;
+        right: 22%;
+        z-index: 5;
+        width: 446px;
+        height: 584px;
+        background: var(--silver);
+        border-radius: 20px;
+    }
     .user{
         display: flex;
-        justify-items: center;
-        align-items: center;
-        margin-right: 40px;
+        position: absolute;
+        right: 40px;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         background: var(--orange);
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    .user-img {
-        margin: 2px;
-    }
-    .home {
-        margin-top: 10%;
-        width: auto;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-    .home-img {
-        width: 50%;
-        height: 50%;
-    }
-    footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 65px;
-        background: var(--dark-blue); 
-    }
     .menu {
         position: absolute;
+        top: 0;
         width: 381px;
-        height: 688px;
+        height: 689px;
+        margin-top: 55px;
         background: var(--silver);
         z-index: 2;
     }
@@ -124,54 +112,62 @@
         margin: 10px;
         color: var(--black);
     }
-    /* .notificacion-page {
-        display: flex;
-        z-index: 3;
-        margin-left: 0;
-        width:584px;
-        height: 446px;
-        background: var(--silver);
-        border-radius: 20px;
-    } */
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 65px;
+        background: var(--dark-blue); 
+    }
+    .user-img {
+        margin: 2px;
+    }
+    .hamburguesa:hover {
+        box-shadow: none;
+    }
 
+    .notification:hover {
+        box-shadow: none;
+    }
+    .user:hover {
+        box-shadow: none;
+    }
     </style>
-    <title>Cap Home</title>
 </head>
 <body>
-    <nav class="nav-bar">
-        <div class="hamburguesa">
-            <img class="hamburguesa-img" src="./src/img/Hamburguer.svg" alt="Menu">
-        </div>
-        <div class="nav-right">
-            <div class="notification">
-                <img class="notification-img" src="./src/img/notification.svg" alt="notification">
-            </div>
-            <div class="user">
-                <img class="user-img" src="./src/img/User.svg" alt="Menu">
-            </div>
-        </div>
-    </nav>
-    <div class="menu">
-        <li>Paqueteo</li>
-        <li>Ensaque</li>
-    </div>
-    <div class="notificacion-page">
-        <div>
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div>
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div>
-            <img src="" alt="">
-            <p></p>
-        </div>
-    </div>
     <div class="home">
-        <img class="home-img" src="./src/img/Logotipo-CAP-color sin texto.svg" alt="logo">
+        <nav class="nav-bar">
+            <div class="hamburguesa">
+                <img class="hamburguesa-img" src="./src/img/Hamburguer.svg" alt="Menu">
+            </div>
+            <div class="nav-right">
+                <div class="notification">
+                    <img class="notification-img" src="./src/img/notification.svg" alt="notification">
+                    <div class="notification-page">
+                        <div>
+                            <img src="" alt="">
+                            <p></p>
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <p></p>
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <img class="user-img" src="./src/img/User.svg" alt="Menu">
+                </div>
+            </div>
+        </nav>
+        <div class="menu">
+            <li>Paqueteo</li>
+            <li>Ensaque</li>
+        </div>
+        <FOoter></FOoter>
     </div>
-    <FOoter></FOoter>
 </body>
 </html>
