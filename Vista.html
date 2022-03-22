@@ -24,6 +24,7 @@
     }
     body {
         margin: 0;
+        font-family: 'Quicksand', sans-serif;
     }
     .home {
         background: var(--lite-white);
@@ -133,10 +134,120 @@
     .frequent-button {
         border: none;
         background: var(--orange);
+        font-family: 'Quicksand', sans-serif;
         border-radius: 20px ;
         color: var(--white);
         margin: 3px 20px 3px 20px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    /* selector de ensacadora */
+
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: 'Quicksand', sans-serif;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+    }
+    select::-ms-expand {
+    display: none;
+    }
+    select {
+        outline: none;
+    }
+    .select {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "select";
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--dark-blue);
+    border-radius: 20px;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    color: var(--grey);
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);    
+    }
+    .select-ensacadora {
+        color: var(--black);
+    }
+    .select:after,
+    .select-number:after {
+        display: grid;
+        content: "";
+        width: 0.8em;
+        height: 0.5em;
+        background-color: var(--orange);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        justify-self: end;
+        pointer-events: none;
+    }
+    select,
+    .select:after,
+    .select-number:after {
+    grid-area: select;
+    }
+    .select-number {
+        display: grid;
+        align-items: center;
+        grid-template-areas: "select";
+        width: 100%;
+        min-width: 5ch;
+        max-width: 10ch;
+        border: 1px solid var(--dark-blue);
+        border-radius: 20px;
+        padding: 0.25em 0.5em;
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1.1;
+        background-color: #fff;
+        color: var(--grey);
+        background-image: linear-gradient(to top, #f9f9f9, #fff 33%); 
+        }
+    #numeroensacadora{
+        color: var(--black);
+    }
+    
+    .orden-ensaque {
+        display: flex;
+        position: relative;
+        top: 45px;
+        height: 40px;
+        justify-content: space-between;
+        margin-left: 60px;
+        margin-right: 40%;
+    }
+    .select h2, .select-number h2 {
+        color: var(--dark-blue);
+        position: absolute;
+        bottom: 30px;
+        font-size: var(--bold-text);
+        width: 150px;
+        margin-left: -10px;
+        font-family: 'Quicksand', sans-serif;
+        
+    }
+    .title-seccionOrEn{
+        color: var(--dark-blue);
+        font-size: var(--title);
+        font-weight: bold;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 60px;
     }
     footer {
         position: fixed;
@@ -203,11 +314,31 @@
         </div>
         <div>
             <div class="orden-ensaque">
-                <h1>Orden de ensaque</h1>
-                <h2>Ensacadora</h2>
-                <h2>Orden de ensaque</h2>
-                <select name="ensacadora" id=""></select>
-                <input type="number">
+                <h1 class="title-seccionOrEn">Orden de ensaque</h1>
+                
+                
+                <div class="select">
+                    <h2>Ensacadora</h2>
+                    <select name="ensacadora" id="ensacadora" class="select-ensacadora">
+                        <option value="0" selected disabled>Seleciona ensacadora</option>
+                        <option value="1">Ensacadora 410 duplex</option>
+                        <option value="2">Ensacadora 420 duplex</option>
+                        <option value="3">Ensacadora 430 duplex</option>
+                        <option value="4">Ensacadora 440 duplex</option>
+                    </select>
+                </div>
+                <div class="select-number">
+                    <h2>Orden de ensaque</h2>
+                    <select name="numeroensacadora" id="numeroensacadora">
+                        <option value="5" selected disabled>numero</option>
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                    </select>
+                </div>
+
             </div>
             <div>tabla</div>
         </div>
