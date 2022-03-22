@@ -206,12 +206,12 @@
         align-items: center;
         grid-template-areas: "select";
         width: 100%;
-        min-width: 5ch;
-        max-width: 10ch;
+        min-width: 5%;
+        max-width: 15%;
         border: 1px solid var(--dark-blue);
         border-radius: 20px;
         padding: 0.25em 0.5em;
-        font-size: 1.25rem;
+        font-size: var(--bold-text);
         cursor: pointer;
         line-height: 1.1;
         background-color: #fff;
@@ -228,8 +228,8 @@
         top: 45px;
         height: 40px;
         justify-content: space-between;
-        margin-left: 60px;
-        margin-right: 40%;
+        margin-left: 10%;
+        margin-right: 20%;
     }
     .select h2, .select-number h2 {
         color: var(--dark-blue);
@@ -248,6 +248,14 @@
         justify-self: center;
         align-self: center;
         margin-bottom: 60px;
+        
+    }
+    .line-top {
+        position: absolute;
+        top: 15px;
+        right: inherit;
+        width: 190px;
+        left: 0px;
     }
     footer {
         position: fixed;
@@ -314,11 +322,15 @@
         </div>
         <div>
             <div class="orden-ensaque">
-                <h1 class="title-seccionOrEn">Orden de ensaque</h1>
+                <h1 class="title-seccionOrEn">Orden de ensaque
+                    <img class="line-top" src="./src/img/linea redondeada.svg" alt="linea">
+                </h1>
+
                 
                 
                 <div class="select">
                     <h2>Ensacadora</h2>
+                    
                     <select name="ensacadora" id="ensacadora" class="select-ensacadora">
                         <option value="0" selected disabled>Seleciona ensacadora</option>
                         <option value="1">Ensacadora 410 duplex</option>
