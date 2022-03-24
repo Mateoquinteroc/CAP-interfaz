@@ -257,6 +257,28 @@
         width: 190px;
         left: 0px;
     }
+    /* Ordenes de ensaque */
+
+    .table-ordenes {
+        position: relative;
+        background: var(--silver);
+        padding-left: 5px;
+        border-radius: 20px;
+        border-collapse: collapse;
+        width: 90%;
+        right: -5%;
+        top: 60px;
+    }
+    .table-ordenes th {
+        color: var(--dark-blue);
+    }
+    .table-data {
+        margin: 5px;
+        text-align: center;
+    }
+    .table-data td {
+        color: var(--black);
+    }
     footer {
         position: fixed;
         bottom: 0;
@@ -276,6 +298,9 @@
     }
     .frequent-button:hover {
         box-shadow: none;
+    }
+    .table-data:hover {
+        background: var(--grey);
     }
     </style>
 </head>
@@ -352,7 +377,67 @@
                 </div>
 
             </div>
-            <div>tabla</div>
+            <div>
+                <table class="table-ordenes">
+                    <thead>
+                        <tr class="tr-ordenes">
+                            <th></th>
+                            <th></th>
+                            <th>Numero</th>
+                            <th>Lote</th>
+                            <th>Estado</th>
+                            <th>Inicio</th>
+                            <th>Fin</th>
+                            <th>Producto</th>
+                            <th>Tolva</th>
+                            <th>Operario</th>
+                            <th>Bultos<br>meta</th>
+                            <th>Bultos<br>reales</th>
+                            <th>F. Variable</th>
+                            <th>F. Pesajes</th>
+                            <th>Tara<br>Empaque</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-data">
+                        <tr>
+                            <td><img src="./src/img/impresora.svg" alt=""></td>
+                            <td><img src="./src/img/ojo tabla.svg" alt=""></td>
+                            <td>18</td>
+                            <td>111111-18</td>
+                            <td>En ejecución</td>
+                            <td>Nov 11 <br>01:55 pm</td>
+                            <td>En proceso</td>
+                            <td>C.MAXI-CERDOS 337<br>FINALIZADORP.P640</td>
+                            <td>Togra<br>441</td>
+                            <td>Ninguno</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>100<br>0</td>
+                            <td>49</td>
+                            <td>0.0069</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-data">
+                        <tr>
+                            <td><img src="./src/img/impresora.svg" alt=""></td>
+                            <td><img src="./src/img/ojo tabla.svg" alt=""></td>
+                            <td>18</td>
+                            <td>111111-18</td>
+                            <td>En ejecución</td>
+                            <td>Nov 11 <br>01:55 pm</td>
+                            <td>En proceso</td>
+                            <td>C.MAXI-CERDOS 337<br>FINALIZADORP.P640</td>
+                            <td>Togra<br>441</td>
+                            <td>Ninguno</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>100<br>0</td>
+                            <td>49</td>
+                            <td>0.0069</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div>muestra de variables
 
