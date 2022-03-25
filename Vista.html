@@ -278,9 +278,69 @@
     }
     .table-data td {
         color: var(--black);
+        /* border-top: solid 2px var(--black); */
+    }
+     /* Muestra de Variables */
+
+    .muestra-variable {
+        justify-content: space-between;
+        position: absolute;
+        bottom: 65px;
+        right: 5%;
+        background: var(--dark-blue);
+        width: 90%;
+        height: 45%;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .muestra-variable h1 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        right: 40%;
+        top: -5%;
+        width: 216px;
+        height: 25px;
+        color: var(--lite-white);
+        background: var(--orange);
+        font-size: var(--bold-text);
+        font-weight: normal;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .pestana {
+        display: flex;
+        justify-content: center;
+        font-size: var(--bold-text);
+        position: absolute;
+        top: -3.5%;
+        left: 0;
+        background: var(--lite-white);
+        width: 37px;
+        height: 15px;
+        color: var(--black);
+        border-radius: 5px 5px 0px 0px;
+    }
+    .muestra-variable-pestana {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 2.5%;
+        bottom: 0;
+        background: var(--lite-white);
+        width: 95%;
+        height: 90%;
+        border-radius: 0px 20px 20px 20px;
+    }
+    .data-pes-1 {
+        position: absolute;
+        background: var(--white);
+        right: 1%;
+        width: 98%;
+        height: 93%;
+        border-radius: 20px;
     }
     footer {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         width: 100%;
         height: 65px;
@@ -302,6 +362,7 @@
     .table-data:hover {
         background: var(--grey);
     }
+   
     </style>
 </head>
 <body>
@@ -439,9 +500,21 @@
                 </table>
             </div>
         </div>
-        <div>muestra de variables
+            <div class="muestra-variable">
+                <div class="muestra-variable-pestana">
+                    <ul>
+                        <div class="pestana">1</div>
+                        <li class="pes-1">
+                            <div class="data-pes-1">
+                                <h1>Variable de la muestra 1</h1>
+                                <table></table>
+                            </div>
+                        </li>
 
-        </div>
+                        <li class="pes-2"></li>
+                    </ul>
+                </div>
+            </div>
         <footer></footer>
     </div>
 </body>
