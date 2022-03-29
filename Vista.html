@@ -313,7 +313,7 @@
         align-items: center;
         font-size: var(--bold-text);
         position: absolute;
-        top: -2.5%;
+        bottom: 100%;
         left: 0;
         border: 0.5px;
         background: var(--lite-white);
@@ -328,7 +328,7 @@
         align-items: center;
         font-size: var(--bold-text);
         position: absolute;
-        top: -2.5%;
+        bottom: 100%;
         border: 0.5px;
         background: var(--orange);
         width: 37px;
@@ -346,6 +346,9 @@
         width: 95%;
         height: 90%;
         border-radius: 0px 20px 20px 20px;
+    }
+    .muestra-variable-pestana ul{
+        list-style: none;
     }
     .data-pes-1 {
         position: absolute;
@@ -368,11 +371,11 @@
         position: absolute;
         font-size: var(--bold-text);
         font-weight: 300;
-        border-collapse: separate;
+        border-collapse: collapse;
         border-spacing: 150px 20px;
         width: 90%;
         right: 5%;
-        top: 60px;
+        top: 130px;
     }
     .table-variable th {
         color: var(--dark-blue);
@@ -383,6 +386,14 @@
         color: var(--black);
         text-align: center;
         margin: 0%;
+        border-bottom: 1px solid var(--black);
+    }
+    .last-data td {
+        border-bottom: none;
+    }
+    
+    .botton-variable {
+        width: 15%;
     }
     .hamburguesa:hover {
         box-shadow: none;
@@ -400,10 +411,17 @@
     .table-data:hover {
         background: var(--grey);
     }
-    @media (max-width: 640px){
+    @media (max-width: 1133px){
         .table-variable {
-          border-collapse: collapse;  
+            border-spacing: 61px 0px; 
+            top: 80px;
         }
+        .table-ordenes {
+            font-size: small;
+        }
+        .botton-variable {
+            width: 20%;
+    }
     }
 
    
@@ -567,7 +585,7 @@
                                             <td>No</td>
                                             <td></td>
                                             <td>0</td>
-                                            <td> <div><img src="./" alt=""></div></td>
+                                            <td> <img class="botton-variable" src="./src/img/Camara.svg" alt="Camera"></td>
                                         </tr>
                                     </tbody>
                                     <tbody>
@@ -576,14 +594,18 @@
                                             <td>Si</td>
                                             <td></td>
                                             <td>2</td>
-                                            <td> <div><img src="./" alt=""></div></td>
+                                            <td> <img class="botton-variable" src="./src/img/Plus.svg" alt="plus"></td>
                                         </tr>
                                     </tbody>
-                                    <td>%humedad</td>
+                                    <tbody class="last-data">
+                                        <tr>
+                                            <td>%humedad</td>
                                             <td>No</td>
                                             <td></td>
                                             <td>0</td>
-                                            <td> <div><img src="./" alt=""></div></td>
+                                            <td><img class="botton-variable" src="./src/img/Plus.svg" alt="plus"></td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </li>
