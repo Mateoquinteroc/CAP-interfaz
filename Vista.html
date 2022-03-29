@@ -310,14 +310,30 @@
     .pestana {
         display: flex;
         justify-content: center;
+        align-items: center;
         font-size: var(--bold-text);
         position: absolute;
-        top: -3.5%;
+        top: -2.5%;
         left: 0;
+        border: 0.5px;
         background: var(--lite-white);
         width: 37px;
         height: 15px;
         color: var(--black);
+        border-radius: 5px 5px 0px 0px;
+    }
+    .pestana-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--bold-text);
+        position: absolute;
+        top: -2.5%;
+        border: 0.5px;
+        background: var(--orange);
+        width: 37px;
+        height: 15px;
+        color: var(--lite-white);
         border-radius: 5px 5px 0px 0px;
     }
     .muestra-variable-pestana {
@@ -346,6 +362,28 @@
         height: 65px;
         background: var(--dark-blue); 
     }
+    /* Variable Muestra */
+    .table-variable {
+        justify-content: space-between;
+        position: absolute;
+        font-size: var(--bold-text);
+        font-weight: 300;
+        border-collapse: separate;
+        border-spacing: 150px 20px;
+        width: 90%;
+        right: 5%;
+        top: 60px;
+    }
+    .table-variable th {
+        color: var(--dark-blue);
+        text-align: center;
+        margin: 0%;
+    }
+    .table-variable td {
+        color: var(--black);
+        text-align: center;
+        margin: 0%;
+    }
     .hamburguesa:hover {
         box-shadow: none;
     }
@@ -362,6 +400,12 @@
     .table-data:hover {
         background: var(--grey);
     }
+    @media (max-width: 640px){
+        .table-variable {
+          border-collapse: collapse;  
+        }
+    }
+
    
     </style>
 </head>
@@ -506,11 +550,44 @@
                         <div class="pestana">1</div>
                         <li class="pes-1">
                             <div class="data-pes-1">
-                                <h1>Variable de la muestra 1</h1>
-                                <table></table>
+                                <h1>Variable de la muestra 2</h1>
+                                <table class="table-variable">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Valor</th>
+                                            <th></th>
+                                            <th>Observaciones</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Humedad relativa y temperatura</td>
+                                            <td>No</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td> <div><img src="./" alt=""></div></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td>%flotabilidad</td>
+                                            <td>Si</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td> <div><img src="./" alt=""></div></td>
+                                        </tr>
+                                    </tbody>
+                                    <td>%humedad</td>
+                                            <td>No</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td> <div><img src="./" alt=""></div></td>
+                                </table>
                             </div>
                         </li>
-
+                        <div class="pestana-2">2</div>
                         <li class="pes-2"></li>
                     </ul>
                 </div>
