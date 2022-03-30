@@ -26,14 +26,15 @@
             margin: 0;
             background: var(--lite-white);
             font-family: 'Quicksand', sans-serif;
-        }
-        .container {
-            display: grid;
-            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-            margin: 0;
+            position: relative;
+            width: 100vw;
             height: 100vh;
         }
         .container-login{
+            position: absolute;
+            right: 15%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
             display: grid;
             background: var(--window);
             width: 407px;
@@ -43,15 +44,12 @@
             justify-self: start;
             box-shadow: 22.2684px 96.463px 140px rgba(0, 0, 0, 0.14), 11.2734px 48.8344px 61.0312px rgba(0, 0, 0, 0.0945), 4.45368px 19.2926px 22.75px rgba(0, 0, 0, 0.07), 0.974242px 4.22026px 8.09375px rgba(0, 0, 0, 0.0455);
         }
-        .container-login {
-            grid-column: 5 / 6 ;
-            grid-row: 2 / 3;
-        }
-        .container-login{
-            grid-template: repeat(2, 1fr) / repeat(1, 1fr);
-        }
+        
 
         .button-info{
+            position: absolute;
+            bottom: 0;
+            left: 5%;
             border: none;
             width: 100px;
             height: 50px;
@@ -115,18 +113,13 @@
         .login-child input:focus{
             outline:none;
         }
-        .button-info{
-            grid-column: 1 / 2;
-            grid-row: 3 / 4;
-        }
         .logo {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3 ;
-        }
-        .logo {
+            position: absolute;
+            left: 20%;
+            bottom: 35%;
             border: 0;
-            width: 315px;
-            height: 225px;
+            width: 30%;
+            height: 30%;
             justify-self: center;
             align-self: center;
             filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
@@ -149,14 +142,15 @@
             margin-top: 20px;
         }
     /* animaciones  reto solo css*/
-        .button-info:hover {
-            transform: translateY(2px);
+        .button-info:active {
+            box-shadow: none;
         }
-
+        .button-enter:active {
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
         <img  class="logo" src="./src/img/Logotipo CAP color.svg" alt="Logo">
         <button class="button-info">Información</button>
         <div class="container-login">
@@ -173,6 +167,5 @@
                 </ul>
             </div>
         </div>
-    </div>
 </body>
 </html>
