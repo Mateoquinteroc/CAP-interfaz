@@ -72,13 +72,36 @@
         position: absolute;
         left: 158px;
         top: 35%;
-        width: 300px;
-        height: 123px;
+        width: 278px;
         border-radius: 20px;
         box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.25);
+        padding: 10px 0 0 25px;
         border: none;
+        resize: none;
     }
-    
+    .descripcion-input:focus {
+        outline:1px solid var(--dark-blue);
+    }
+    .button-container {
+        position: absolute;
+        width: 300px;
+        left: 158px;
+        bottom: 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .button-container button {
+        width: 120px;
+        height: 36px;
+        background: var(--dark-blue);
+        border-radius: 20px;
+        color: var(--lite-white);
+        border: none;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    .button-container button:active {
+        box-shadow: none;
+    }
 
 </style>
 <body>
@@ -86,8 +109,9 @@
         <h1>Registro valor de variable</h1>
         <h2>Valor</h2>
         <input class="valor-input" type="text" name="valor" placeholder="Valor">
-        <input class="descripcion-input" type="text">
-        <div>
+        <!-- <input class="descripcion-input" type="text" name="descripción" placeholder="Descripción"> -->
+        <textarea name="descripción" class="descripcion-input" cols="30" rows="10" placeholder="Descripción"></textarea>
+        <div class="button-container">
             <button>Aceptar</button>
             <button>Cancelar</button>
         </div>
