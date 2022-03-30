@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Resumen</title>
+    <style>
+    :root {
+        --white: #FFFFFF;
+        --black:#676767;
+        --window:rgba(216, 231, 255, 0.78);
+        --grey:#B5B5B5;
+        --lite-white:#F6F6F6;
+        --silver:#E8E8E8;
+        --block-window:#DBE8FA;
+        --orange:#FF9C40;
+        --dark-blue: #004D84;
+        --bold-text: 12pt;
+        --title: 16pt;
+    }
+    body {
+       margin: 0;
+       position: relative;
+       height: 100vh;
+       width: 100vw;
+       font-family: 'Quicksand', sans-serif;
+    }
+    .resumen-orden {
+        position: absolute;
+        transform: translate(50%, 50%);
+        right: 50%;
+        bottom: 50%;
+        width: 1065px;
+        height: 436px;
+        background: var(--lite-white);
+        border-radius: 20px;
+        box-shadow: 29.4885px 28.4855px 53px rgba(0, 0, 0, 0.13), 5.89771px 5.69711px 8.6125px rgba(0, 0, 0, 0.065);
+    }
+    .resumen-orden h1 {
+        position: relative;
+        left: 63px;
+        top: 27px;
+        color: var(--dark-blue);
+        font-size: var(--bold-text);
+        font-weight: bold;
+    }
+    .orden-ensaque {
+        width: 90%;
+        position: relative;
+        left: 43px;
+        top: 45px;
+        background: var(--silver);
+        border-radius: 20px;
+        padding: 10px ;
+    }
+    .orden-ensaque th {
+        color: var(--dark-blue);
+        font-size: 10pt;
+        border-radius: 20px;
+    }
+    .orden-ensaque tbody {
+        width: 90%;
+        font-size: 10pt;
+        text-align: center;
+    }
+    .variable-muestra {
+        position: relative;
+        top: 40px;
+        left: 50%;
+        width: 40%;
+        transform: translate(-50%, 50%);
+        border-collapse: collapse;
+    }
+    .variable-muestra td {
+        border: 1px solid var(--black);
+    }
+    .variable-muestra th {
+        background: var(--dark-blue);
+        color: var(--lite-white);
+        border: 1px solid var(--black);
+    }
+    .variable-muestra tbody td:nth-child(1){
+        background: var(--window);
+        padding-left: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="resumen-orden">
+        <h1>Resumen de orden de ensaque</h1>
+        <table class="orden-ensaque">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Lote</th>
+                    <th>Estado</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th>Producto</th>
+                    <th>Tolva</th>
+                    <th>Operario</th>
+                    <th>Bultos<br>meta</th>
+                    <th>Bultos<br>reales</th>
+                    <th>F.Variable</th>
+                    <th>F.Pesajes</th>
+                    <th>Tara<br>Empaque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>18</td>
+                    <td>111111-18</td>
+                    <td>En ejecución</td>
+                    <td>Nov 11 <br>01:55 pm</td>
+                    <td>En proceso</td>
+                    <td>C.MAXI-CERDOS 337<br>FINALIZADORP.P640</td>
+                    <td>Togra<br>441</td>
+                    <td>Ninguno</td>
+                    <td>500</td>
+                    <td>0</td>
+                    <td>100<br>0</td>
+                    <td>49</td>
+                    <td>0.0069</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="variable-muestra">
+            <thead>
+                <tr class="fila-1">
+                    <th>Variable/Muestra</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Humedad</td>
+                    <td>2.2</td>
+                    <td>3.1</td>
+                    <td>2.6</td>
+                    <td>1.9</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Durabilidad</td>
+                    <td>0.7</td>
+                    <td>0.9</td>
+                    <td>0.4</td>
+                    <td>0.6</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>%Finos</td>
+                    <td>6.2</td>
+                    <td>4.7</td>
+                    <td>3.4</td>
+                    <td>4.9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
